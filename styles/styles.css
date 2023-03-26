@@ -735,8 +735,8 @@ body {
   appearance: none;
 }
 
-.form-input[type=number],
-.form-input[type=text] {
+.form-input[type="number"],
+.form-input[type="text"] {
   appearance: textfield;
 }
 
@@ -839,17 +839,17 @@ body {
   appearance: none;
 }
 
-.filter-control-input[type=checkbox]:checked {
+.filter-control-input[type="checkbox"]:checked {
   background-image: url("../images/filter/checkbox.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.filter-control-input[type=radio] {
+.filter-control-input[type="radio"] {
   border-radius: 50%;
 }
 
-.filter-control-input[type=radio]:checked::after {
+.filter-control-input[type="radio"]:checked::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -1357,4 +1357,85 @@ body {
 
 .subscribe-description-dark {
   color: #333333;
+}
+
+/* MODAL */
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 40px;
+  background-color: #ffffff;
+}
+
+.modal-content {
+  width: 717px;
+}
+
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 0;
+  right: 0;
+  width: 56px;
+  height: 44px;
+  background-color: #ffffff;
+  border: none;
+  background-image: url("../images/close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 0;
+  right: 0;
+  width: 52px;
+  height: 52px;
+  background: #f2f2f2;
+  border-radius: 100%;
+  border: none;
+  background-image: url("../images/modal-close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  margin: 0;
+  margin-bottom: 24px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.number-field-count {
+  display: flex;
+  justify-content: space-between;
+}
+
+.number-field {
+  width: 31px;
+  height: 48px;
+  text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
