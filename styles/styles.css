@@ -306,10 +306,15 @@ body {
 
 .advantages-title-subject {
   color: #000000;
+  padding-top: 11;
 }
 
 .advanteges-container {
-  padding: 102px 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 85px;
+  height: 100%;
 }
 
 .advantages-title::after {
@@ -355,19 +360,20 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  min-height: 385px;
 }
 
 .services-item {
   background: rgba(131, 179, 211, 0.12);
   width: 230px;
-  padding: 80px 85px 80px;
+  padding: 84px 85px;
   position: relative;
 }
 
 .services-img {
   position: absolute;
   left: calc(40%);
-  top: calc(20%);
+  top: calc(21%);
 }
 
 .services-title {
@@ -376,7 +382,7 @@ body {
   line-height: 28px;
   text-align: center;
   text-transform: uppercase;
-  margin-top: 100px;
+  margin-top: 102px;
 }
 
 .services-item-food {
@@ -385,19 +391,22 @@ body {
 
 .services-description {
   text-align: center;
+  margin: 0;
+  margin-top: 30px;
 }
 
 /* SEARCH */
 
 .search {
-  padding-top: 96px;
-  padding-bottom: 96px;
+  min-height: 406px;
 }
 
 .search-container {
   width: 592px;
   margin: 0 auto;
   text-align: center;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .search-title {
@@ -414,7 +423,7 @@ body {
   line-height: 26px;
   color: #333333;
   text-transform: none;
-  margin-bottom: 54px;
+  margin-bottom: 60px;
 }
 
 .search-button {
@@ -427,8 +436,9 @@ body {
   color: #ffffff;
   background: #756157;
   text-align: center;
+  height: 52px;
   border-radius: 4px;
-  padding: 8px 50px;
+  padding: 12px 50px;
 }
 
 .search-button:hover {
@@ -449,7 +459,8 @@ body {
 /* SUBSCRIBE */
 
 .subscribe {
-  padding: 96px 258px 104px;
+  width: 684px;
+  padding: 94px 258px 100px;
   text-align: center;
 }
 
@@ -465,23 +476,30 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0 auto;
 }
 
 .subscribe-description {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
-  margin: 20px 104px 24px;
+  margin-left: 104px;
+  margin-right: 104px;
+  margin-bottom: 54px;
 }
 
 .subscribe-form {
   display: flex;
   justify-content: center;
+  height: 52px;
+  width: 684px;
 }
 
 .subscribe-form-name {
   display: flex;
-  /* margin-top: 54px; */
+  margin: 0;
+  padding: 0;
+  width: 684px;
 }
 
 .subscribe-form-name input {
@@ -493,8 +511,7 @@ body {
   border: none;
   background: #f2f2f2;
   border-radius: 4px 0 0 4px;
-  width: 402px;
-  height: 52px;
+  width: 452px;
   margin: 0;
   padding-left: 20px;
 }
@@ -520,6 +537,8 @@ body {
 }
 
 .subscribe-button {
+  font-family: "PT Sans";
+  font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
@@ -529,9 +548,10 @@ body {
   border-radius: 0 4px 4px 0;
   border: none;
   text-transform: uppercase;
-  padding: 8px 50px;
+  width: 232px;
   cursor: pointer;
   margin: 0;
+  padding: 0;
 }
 
 .subscribe-button:hover {
@@ -1097,13 +1117,14 @@ body {
   justify-content: space-between;
   align-items: center;
   padding-top: 50px;
+  height: 49px;
 }
 
 .catalog-select-control {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
-  margin-left: 200px;
+  margin-left: 154px;
   width: 292px;
   height: 50px;
   padding: 14px 20px 14px 20px;
@@ -1129,7 +1150,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   width: 200px;
 }
 
@@ -1138,9 +1159,9 @@ body {
   align-items: center;
   justify-content: center;
   border: 2px solid #e5e5e5;
-  margin-left: 8px;
-  width: 48px;
-  height: 48px;
+  margin-left: 7px;
+  width: 46px;
+  height: 44px;
   border-radius: 4px;
 }
 
@@ -1163,6 +1184,11 @@ body {
 
 /* PRODUCT-LIST */
 
+.catalog-filter-product {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
 .catalog-product-container {
   margin: 0;
 }
@@ -1170,11 +1196,11 @@ body {
 .product-list {
   display: grid;
   grid-template-columns: repeat(3, 340px);
-  gap: 20px;
+  gap: 16px;
   margin: 0;
   padding: 0;
   margin-top: 40px;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 }
 
 .product-card {
@@ -1198,8 +1224,7 @@ body {
   line-height: 28px;
   color: #000000;
   margin: 0;
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin-top: 11px;
 }
 
 .product-card-item {
@@ -1303,6 +1328,14 @@ body {
 
 .rating-starbox {
   grid-column: 1 / 2;
+  margin: 0;
+  padding: 0;
+}
+
+.rating-star {
+  margin: 0;
+  margin-top: 6px;
+  padding: 0;
 }
 
 /* PAGINATION */
@@ -1379,7 +1412,7 @@ body {
 
 /* MODAL */
 
-/* .modal-container {
+.modal-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -1388,38 +1421,27 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 100;
-} */
+}
 
 .modal {
   position: relative;
   margin: auto;
-  padding: 40px;
-  background-color: #ffffff;
+  padding: 64px 70px;
+  background: #ffffff;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
 }
 
 .modal-content {
   width: 717px;
+  height: 576px;
 }
 
 .modal-close-button {
   position: absolute;
   padding: 0;
-  top: 0;
-  right: 0;
-  width: 56px;
-  height: 44px;
-  background-color: #ffffff;
-  border: none;
-  background-image: url("../images/close.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-}
-.modal-close-button {
-  position: absolute;
-  padding: 0;
-  top: 0;
-  right: 0;
+  top: 64px;
+  right: 52px;
   width: 52px;
   height: 52px;
   background: #f2f2f2;
@@ -1441,6 +1463,30 @@ body {
   text-transform: uppercase;
 }
 
+.field-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.form-label {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  margin-right: 24px;
+}
+
+.calendar-field {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 12px 20px;
+  background: #f2f2f2;
+  width: 440px;
+  border-radius: 4px;
+  margin: 0;
+}
+
 .number-field-count {
   display: flex;
   justify-content: space-between;
@@ -1456,4 +1502,11 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.modal-search-btn {
+  width: 577px;
+  height: 60px;
+  background: #83b3d3;
+  border-radius: 10px;
 }
