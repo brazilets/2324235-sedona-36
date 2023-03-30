@@ -1488,10 +1488,6 @@ body {
   margin-right: 19px;
 }
 
-.form-label-children {
-  margin-right: 10px;
-}
-
 .form-message {
   font-weight: 400;
   font-size: 16px;
@@ -1583,4 +1579,33 @@ input::-webkit-inner-spin-button {
   line-height: 24px;
   color: #ffffff;
   text-transform: uppercase;
+}
+
+.tooltip-toggle {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.tooltip-icon {
+  width: 100%;
+  /* height: 100%; */
+  /* color: #242424; */
+  /* display: block; */
+}
+
+.tooltip-toggle:hover .tooltip-icon {
+}
+
+.tooltip-text {
+  background: #333333;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+color: #ffffff;
+width: 256px;
 }
