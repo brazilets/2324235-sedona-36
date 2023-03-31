@@ -1419,8 +1419,12 @@ body {
   display: flex;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background: rgba(242, 242, 242, 0.8);
   z-index: 100;
+}
+
+.modal-container-close {
+  display: none;
 }
 
 .modal {
@@ -1431,8 +1435,7 @@ body {
   border-radius: 30px;
   width: 717px;
   height: 576px;
-  /* margin-top: 396px;
-  margin-bottom: 2574px; */
+  top: 396px;
 }
 
 .modal-content {
@@ -1454,6 +1457,21 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+}
+
+.modal-close-button:hover {
+  background: #e6e6e6 url("../images/modal/modal-close.svg") no-repeat center;
+}
+
+.modal-close-button:focus {
+  background: #e6e6e6 url("../images/modal/modal-close.svg") no-repeat center;
+  outline: solid #83b3d3;
+}
+
+.modal-close-button:active {
+  background: #e6e6e6 url("../images/modal/modal-close.svg") no-repeat center;
+  opacity: 0.3;
+  outline: none;
 }
 
 .modal-title {
@@ -1509,10 +1527,30 @@ body {
   font-size: 18px;
   line-height: 24px;
   padding: 12px 0 12px 20px;
-  background: #f2f2f2;
+  background: #f2f2f2 url("../images/modal/modal-icon.svg") no-repeat center right 22px;
   border-radius: 4px;
   width: 420px;
   border: none;
+}
+
+.calendar-field:hover {
+  background: #e6e6e6 url("../images/modal/modal-icon.svg") no-repeat center right 22px;
+}
+
+.calendar-field:focus {
+  background: #e6e6e6 url("../images/modal/modal-icon.svg") no-repeat center right 22px;
+  outline: solid #83b3d3;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.calendar-field:active {
+  background: #f2f2f2 url("../images/modal/modal-icon.svg") no-repeat center right 22px;
+  outline: solid #000000;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 .modal-icon-in {
@@ -1533,6 +1571,7 @@ body {
 }
 
 .number-field-min {
+  background: #f2f2f2 url("../images/modal/modal-minus.svg") no-repeat center;
   width: 40px;
   height: 48px;
   border: none;
@@ -1542,10 +1581,11 @@ body {
 
 .form-label-children {
   margin-left: 80px;
-  margin-right: 38px;
+  margin-right: 40px;
 }
 
 .number-field-max {
+  background: #f2f2f2 url("../images/modal/modal-plus.svg") no-repeat center;
   width: 40px;
   height: 48px;
   border: none;
@@ -1562,6 +1602,7 @@ body {
   line-height: 20px;
   background: #f2f2f2;
   margin: 0;
+  padding: 0;
 }
 
 input::-webkit-outer-spin-button,
@@ -1586,24 +1627,38 @@ input::-webkit-inner-spin-button {
   text-transform: uppercase;
 }
 
-.tooltip {
-  position: absolute;
-  margin-top: -7px;
-  margin-left: 140px;
-  width: 16px;
-  height: 16px;
+.modal-search-btn:hover {
+  background: #68a2ca;
 }
 
-.tooltip-toggle {
-  border: none;
-  background-color: transparent;
-  padding: 0;
-  margin: 0;
+.modal-search-btnP:focus {
+  background: #756157;
+  outline: none;
+}
+
+.modal-search-btn:active {
+  color: rgba(255, 255, 255, 0.3);
+  outline: none;
+}
+
+.tooltip {
+  margin-top: -7px;
+  margin-left: 135px;
+  width: 16px;
+  height: 16px;
+  position: absolute;
   display: block;
 }
 
-.tooltip-toggle:hover .tooltip-icon {
-  background: #83b3d3;
+.tooltip-toggle {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  background-image: url("../images/modal/tooltip-icon.svg");
+  width: 26px;
+  height: 26px;
 }
 
 .tooltip-text {
@@ -1616,16 +1671,24 @@ input::-webkit-inner-spin-button {
   text-transform: none;
   padding: 22px 18px 13px 22px;
   border-radius: 10px;
-  display: block;
   width: 216px;
   height: 110px;
   position: absolute;
   top: 38px;
-  left: -115px;
+  left: -114px;
+  display: none;
 }
 
-.tolltip-arrow {
+.tooltip-toggle:hover + .tooltip-text {
+  display: block;
+}
+
+.tooltip-text::before {
   position: absolute;
-  top: 30px;
-  left: 2px;
+  content: "";
+  background: url("../images/modal/tooltip-arrow.svg");
+  width: 19px;
+  height: 9px;
+  bottom: 144px;
+  left: 117px;
 }

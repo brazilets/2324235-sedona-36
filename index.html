@@ -195,7 +195,7 @@
 
     <div class="modal-container modal-container-close">
       <div class="modal modal-search">
-        <button class="modal-close-button" type="button">
+        <button class="modal-close-button" type="button" alt="Модальное окно">
           <span class="visually-hidden">Закрыть</span>
         </button>
         <section class="modal-content">
@@ -204,45 +204,32 @@
             <p class="field-group">
               <label class="form-label form-label-in" for="check-in-date">Дата заезда:</label>
               <input class="form-field calendar-field" type="text" id="check-in-date" name="check-in-date"
-                value="27 апреля 2020" placeholder="Укажите дату">
-              <span class="modal-icon-in"><img src="/images/modal/modal-icon.svg" alt="Календарь"></span>
+                value="27 апреля 2020" placeholder="Укажите дату" required>
               <span class="form-message form-message-error">Мы не можем отправить вас в прошлое.</span>
             </p>
             <p class="field-group">
               <label class="form-label form-label-out" for="check-out-date">Дата выезда:</label>
               <input class="form-field calendar-field" type="text" id="check-out-date" name="check-out-date"
-                value="1 сентября 2023" placeholder="Укажите дату">
-              <span class="modal-icon-out"><img src="/images/modal/modal-icon.svg" alt="Календарь"></span>
+                value="1 сентября 2023" placeholder="Укажите дату" required>
               <span class="form-message">На эти даты есть свободные номера. Пока есть.</span>
             </p>
             <div class="number-field-count">
               <p class="field-group">
                 <label class="form-label form-label-adults" for="adults">Взрослые:</label>
-                <button class="number-field-min" type="button"><img src="/images/modal/modal-minus.svg"
-                    alt="minus"></button>
+                <button class="number-field-min" type="button" alt="Меньше"></button>
                 <input class="form-field number-field" type="number" id="adults" name="adults" value="2">
-                <button class="number-field-max" type="button"><img src="/images/modal/modal-plus.svg"
-                    alt="plus"></button>
+                <button class="number-field-max" type="button" alt="Больше"></button>
               </p>
               <p class="field-group">
                 <label class="form-label form-label-children" for="children">Дети:</label>
                 <span class="tooltip">
-                  <button class="tooltip-toggle" type="button"></button>
-                  <svg class="tolltip-arrow" xmlns="http://www.w3.org/2000/svg" width="19" height="9" fill="none">
-                    <path fill="#333" d="M9.5 0 19 9H0l9.5-9Z" />
-                  </svg>
-                  <svg class="tooltip-icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none">
-                    <circle cx="13" cy="13" r="13" fill="#83B3D3" />
-                    <path fill="#fff" fill-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" clip-rule="evenodd" />
-                  </svg>
+                  <button class="tooltip-toggle" type="button" alt="Tooltip"></button>
                   <span class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18
                     лет. Дети до 6 лет размещаются бесплатно.</span>
                 </span>
-                <button class="number-field-min" type="button"><img src="/images/modal/modal-minus.svg"
-                    alt="minus"></button>
+                <button class="number-field-min" type="button" alt="Меньше"></button>
                 <input class="form-field number-field" type="number" id="children" name="children" value="2">
-                <button class="number-field-max" type="button"><img src="/images/modal/modal-plus.svg"
-                    alt="plus"></button>
+                <button class="number-field-max" type="button" alt="Больше"></button>
               </p>
             </div>
             <button class="modal-search-btn" type="button">Найти</button>
