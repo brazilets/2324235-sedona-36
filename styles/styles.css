@@ -1423,19 +1423,18 @@ body {
   z-index: 100;
 }
 
-.modal-container-close {
+/* .modal-container-close {
   display: none;
-}
+} */
 
 .modal {
   position: relative;
-  margin: 0 auto;
+  margin: auto;
   background: #ffffff;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
   width: 717px;
   height: 576px;
-  top: 396px;
 }
 
 .modal-content {
@@ -1571,12 +1570,24 @@ body {
 }
 
 .number-field-min {
-  background: #f2f2f2 url("../images/modal/modal-minus.svg") no-repeat center;
+  background: #f2f2f2;
   width: 40px;
-  height: 48px;
-  border: none;
+  height: 46px;
   margin-left: 42px;
   border-radius: 4px 0 0 4px;
+  outline: none;
+  border: none;
+}
+
+.number-field-min svg {
+  outline: none;
+}
+
+
+.number-field-min:focus svg {
+  outline: 2px solid #83B3D3;
+  padding: 8px 2px;
+  border-radius: 4px;
 }
 
 .form-label-children {
@@ -1585,17 +1596,26 @@ body {
 }
 
 .number-field-max {
-  background: #f2f2f2 url("../images/modal/modal-plus.svg") no-repeat center;
+  background: #f2f2f2;
+  outline: none;
   width: 40px;
-  height: 48px;
+  height: 46px;
   border: none;
   border-radius: 0 4px 4px 0;
+  padding-top: 2px;
+}
+
+.number-field-max:focus svg {
+  outline: 2px solid #83B3D3;
+  border-radius: 4px;
+  padding: 2px;
 }
 
 .number-field {
   width: 31px;
   height: 46px;
   text-align: center;
+  outline: none;
   border: none;
   font-weight: 700;
   font-size: 18px;
@@ -1659,6 +1679,7 @@ input::-webkit-inner-spin-button {
   background-image: url("../images/modal/tooltip-icon.svg");
   width: 26px;
   height: 26px;
+  outline: none;
 }
 
 .tooltip-text {
