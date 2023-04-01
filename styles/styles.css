@@ -306,7 +306,7 @@ body {
 
 .advantages-title-subject {
   color: #000000;
-  padding-top: 11;
+  padding-top: 11px;
 }
 
 .advanteges-container {
@@ -1423,9 +1423,9 @@ body {
   z-index: 100;
 }
 
-/* .modal-container-close {
+.modal-container-close {
   display: none;
-} */
+}
 
 .modal {
   position: relative;
@@ -1434,7 +1434,6 @@ body {
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
   width: 717px;
-  height: 576px;
 }
 
 .modal-content {
@@ -1495,20 +1494,19 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-}
-
-form-label-adults {
-  margin-right: 2px;
-}
-
-.form-label-in {
-  margin-right: 24px;
+  max-width: 120px;
   cursor: pointer;
+  word-break: break-word;
 }
 
-.form-label-out {
-  margin-right: 18px;
-  cursor: pointer;
+.form-label-adults.form-label {
+  max-width: 92px;
+  margin-right: 29px;
+}
+
+.form-label-children.form-label {
+  max-width: 50px;
+  margin-right: 64px;
 }
 
 .form-message {
@@ -1536,6 +1534,7 @@ form-label-adults {
   border-radius: 4px;
   width: 420px;
   border: none;
+  margin-left: auto;
 }
 
 .calendar-field:hover {
@@ -1545,10 +1544,14 @@ form-label-adults {
 
 .calendar-field:focus {
   background: #e6e6e6 url("../images/modal/modal-icon.svg") no-repeat center right 22px;
-  outline: solid #83b3d3;
+  outline: solid #000000;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
+}
+
+.calendar-field:placeholder-shown:focus {
+  outline: solid #83b3d3;
 }
 
 .calendar-field:active {
@@ -1582,7 +1585,7 @@ form-label-adults {
   background: #f2f2f2;
   width: 40px;
   height: 46px;
-  margin-left: 42px;
+  margin-left: 18px;
   border-radius: 4px 0 0 4px;
   border: none;
   outline: none;
@@ -1593,6 +1596,11 @@ form-label-adults {
 .number-field-min svg {
   outline: none;
   width: 14px;
+  fill: rgba(117, 97, 87, 0.3);
+}
+
+.number-field-min:hover svg {
+  fill: #000000;
 }
 
 .number-field-min:focus svg {
@@ -1600,11 +1608,13 @@ form-label-adults {
   width: 14px;
   padding: 8px 2px;
   border-radius: 4px;
+  fill: #000000;
 }
 
-.form-label-children {
-  margin-left: 80px;
-  margin-right: 40px;
+.number-field-min:active svg {
+  outline: none;
+  fill: #756157;
+  opacity: 0.3;
 }
 
 .number-field-max {
@@ -1618,10 +1628,25 @@ form-label-adults {
   cursor: pointer;
 }
 
+.number-field-max svg {
+  fill: rgba(117, 97, 87, 0.3);
+}
+
+.number-field-max:hover svg {
+  fill: #000000;
+}
+
 .number-field-max:focus svg {
   outline: 2px solid #83b3d3;
   border-radius: 4px;
   padding: 2px;
+  fill: #000000;
+}
+
+.number-field-max:active svg {
+  outline: none;
+  fill: #756157;
+  opacity: 0.3;
 }
 
 .number-field {
@@ -1638,10 +1663,16 @@ form-label-adults {
   padding: 0;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
-  margin: 0;
+}
+
+input[type="number"],
+input[type="number"]:hover,
+input[type="number"]:focus {
+  appearance: none;
+  -moz-appearance: textfield;
 }
 
 .modal-search-btn {
@@ -1678,7 +1709,7 @@ input::-webkit-inner-spin-button {
 
 .tooltip {
   margin-top: -7px;
-  margin-left: 135px;
+  margin-left: 105px;
   width: 16px;
   height: 16px;
   position: absolute;
@@ -1691,8 +1722,8 @@ input::-webkit-inner-spin-button {
   background: transparent;
   padding: 0;
   margin: 0;
-  margin-left: 2px;
-  margin-top: -2px;
+  margin-left: -46px;
+  margin-top: -3px;
   background-image: url("../images/modal/tooltip-icon.svg");
   width: 26px;
   height: 26px;
